@@ -1,10 +1,10 @@
 ---
-const {navn, levested, sund} = Astro.props
+const {navn, levested, sund, link} = Astro.props
 ---
 <article class=blue>
     <h2>{navn}</h2>
     <p>{levested}</p>
-    <button>Læs mere</button>
+    <a href=`single/${link}`>Læs mere</a>
 </article>
 
 <style>
