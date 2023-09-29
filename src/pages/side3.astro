@@ -12,14 +12,12 @@ const options = {
 const response = await fetch(url, options);
 const alMad = await response.json();
 
-console.log(alMad);
+//console.log(alMad);
 ---
 <Skelet title="Side 3">
     <section class="liste">
-        {alMad.map(ret=>{
-            return <MadCard data={ret}/>
-        })
+        {
+            alMad.map(ret=>(<MadCard data={ret}/>))
         }
     </section>
-<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel, aperiam quas a ex id repellendus quis eveniet! Cupiditate quo non, consectetur, quibusdam dicta pariatur adipisci omnis amet voluptatum praesentium officia.</p>
 </Skelet>
