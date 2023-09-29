@@ -1,0 +1,41 @@
+---
+const {data} = Astro.props
+---
+<article class=blue>
+    <h2>{data.navn}</h2>
+    <p>{data.levested}</p>
+    <a href=`single/${data.slug}`>Læs mere</a>
+</article>
+
+<style>
+    article{
+        padding: 1em;
+        margin: 1em;
+        position: relative;
+    }
+    .blue{
+        background-color: cornflowerblue;
+        color: white;
+    }
+
+    .red{
+        background-color: red;
+        color: white;
+    }
+
+    .red::after{
+        content: "USUND!";
+    padding: .5em;
+    background-color: white;
+    color: red;
+    position: absolute;
+    right: 14px;
+    top: 2px;
+    rotate: 345deg;
+    box-shadow: grey -2px 3px 15px;
+    }
+
+    .green{
+    background-color: greenyellow;
+    }
+</style>
